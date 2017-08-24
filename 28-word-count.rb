@@ -3,13 +3,14 @@
 doc = File.read("wordcount.txt")
 
 # ...
-dic = {}
+arr = doc.split("")
+h = {}
+arr.each do |i|
+  if h.has_key?(i)
+    h[i] += 1
+  else
+    h[i] = 1
+  end
+end
 
-doc.each_line do |line|
-   line = line.chomp
-   line.each_char do |char|
-     dic[char] ? dic[char] += 1 : dic[char] = 1
-   end
- end
-
- puts dic
+puts h
