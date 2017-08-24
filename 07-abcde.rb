@@ -19,4 +19,21 @@ z = gets
 
 # ....
 
-puts "结果是________(A或B或C或D或E)"
+x = x.to_i
+y = y.to_i
+z = z.to_i
+
+if x < 0
+  result = "A"
+elsif (x > 0) && (y > 0) && (z > 0)
+  result = "B"
+elsif (x > 0) && (y > 0) && (z < 0)
+  result = "C"
+elsif (x > 0) && (y < 0) && (z > 0)
+  result = "D"
+else (x > 0) && (y < 0) && (z < 0)
+  result = "E"
+end
+
+
+puts "结果是#{result}(A或B或C或D或E)"
